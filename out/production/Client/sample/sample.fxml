@@ -27,6 +27,7 @@
                   <ComboBox fx:id="comboBox" layoutX="20.0" layoutY="194.0" prefHeight="27.0" prefWidth="186.0" />
                   <Button fx:id="btn" layoutX="17.0" layoutY="235.0" mnemonicParsing="false" onAction="#getToa" text="Search" />
                   <Button layoutX="21.0" layoutY="105.0" mnemonicParsing="false" onAction="#getTau" text="Search Date" />
+                  <Button fx:id="btnsreachts" layoutX="25.0" layoutY="392.0" mnemonicParsing="false" onAction="#SearchTrainStation" text="Search Train Station" />
                </children>
             </Pane>
          </left>

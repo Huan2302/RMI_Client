@@ -5,10 +5,15 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
@@ -42,6 +47,8 @@ public class Controller implements Initializable {
     private TextField txtaddress;
     @FXML
     private Button btnpay;
+    @FXML
+    private Button btnsreachts;
 
     private int idtau;
 
@@ -181,6 +188,18 @@ public class Controller implements Initializable {
         } catch (RemoteException e) {
             e.printStackTrace();
         }
+    }
+
+    public void SearchTrainStation(ActionEvent event) throws IOException {
+//        Node node = (Node) event.getSource();
+        Stage stage = new Stage();
+
+        //stage.setMaximized(true);
+        stage.close();
+        Scene scene = new Scene(FXMLLoader.load(getClass().getResource("TrainStation.fxml")));
+        stage.setScene(scene);
+        stage.setTitle("TrainStation");
+        stage.show();
     }
 
     public int convertNametoSoToa(String name){
